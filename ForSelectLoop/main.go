@@ -19,4 +19,6 @@ func main() {
 	for result := range bufferedChannel { // loop over the closed channel
 		fmt.Println(result)
 	}
+
+	// result: a \n b \n c
 }
