@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	mainChannel := make(chan string) // channel opened
 
-	go func() {
+	go func() { // go routine
 		mainChannel <- "Hello, World!" // channel recieves data: "Hello, World!"
 	}()
 
