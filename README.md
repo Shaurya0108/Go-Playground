@@ -1,3 +1,3 @@
 # Go Concurrency
 
-![alt text](image.png)
+![alt text](assets/image.png)
