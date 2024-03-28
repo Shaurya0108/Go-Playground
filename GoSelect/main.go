@@ -14,9 +14,10 @@ func main() {
 		secondChannel <- "Bye, World!" // channel recieves data: "Bye, World!"
 	}()
 
-	res := <- mainChannel // channel closed
-	res2 := <- secondChannel // second channel closed
-
-	fmt.Println(res)
-	fmt.Println(res2)
+	select { // select statement for the message recieved first, otherwise random
+	case messageFromMainChannel := <-mainChannel:
+		fmt.Println(messageFromMainChannel)
+	case messageFromSecondChannel := <-secondChannel:
+		fmt.Println(messageFromSecondChannel)
+	}
 }
