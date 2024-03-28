@@ -48,5 +48,12 @@ func main() {
 		fmt.Println(i) // print the squared values from the channel
 	}
 
-	// result: ... doing work for 3 seconds till the parent go routine cancels the child go routine
+	// result: the two functions wait for each other as they work in sync waiting for the reciever to recieve before sending more into the synchronous channel
+	// 4
+	// 9
+	// 16
+	// 25
+	// 49
+	// 4
+	// 1
 }
